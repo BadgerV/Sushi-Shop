@@ -7,7 +7,7 @@ const Navbar = () => {
         <span className="navbar-left__other">ushi</span>
       </div>
       <div className="navbar-middle">
-        <span>Home</span>
+        <span className="selected-link">Home</span>
         <span>
           Menu
           <img src="/assets/dropdown-icon.svg" alt="down" />
@@ -26,8 +26,8 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-right__contact">
-            <img src="/assets/phone-icon.svg" alt="phone" />
-            <span>Contact Us</span>
+          <img src="/assets/phone-icon.svg" alt="phone" />
+          <span>Contact Us</span>
         </div>
       </div>
     </div>

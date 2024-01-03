@@ -9,7 +9,16 @@
   --primary-color: #36cc45;
   --secondary-color: #2ecc71;
   --accent-color: #e74c3c;
-  --font-color-tertiary: #3a322d;
+  --tertiary-color: #3a322d;
 
   --font-size-primary: 0.9rem;
+  --font-size-secondary: 0.95rem;
+
+  --font-family: "Inter", sans-serif;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
 }

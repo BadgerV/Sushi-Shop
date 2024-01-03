@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
+import Splash from "../../components/Splash/Splash";
 import "./home.css";
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="home">
-        <span>This is the shshi website homepage</span>
+        <Splash />
       </div>
     </>
   );
