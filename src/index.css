@@ -1,0 +1,15 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #36cc45;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --font-color-tertiary: #3a322d;
+
+  --font-size-primary: 0.9rem;
+}
