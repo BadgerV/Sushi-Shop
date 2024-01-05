@@ -6,7 +6,7 @@
 
 .splash-left {
   max-width: 100%;
-  height: 90dvh;
+  height: min(90dvh, 40rem);
   padding: 2rem;
 
   display: flex;
@@ -80,9 +80,12 @@
 .splash-right {
   max-width: 100%;
   position: relative;
+  /* outline: 1px solid red; */
 }
 
 .splash-image {
+  /* scale: 0.9; */
+  outline: 1px solid rd;
   z-index: 20;
   position: relative;
 }
