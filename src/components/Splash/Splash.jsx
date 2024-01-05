@@ -1,7 +1,23 @@
+import { useState, useEffect } from "react";
 import Review from "../Review/Review";
 import "./splash.css";
 
 const Splash = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const props = [
     {
       name: "Makizushi",
@@ -16,19 +32,19 @@ const Splash = () => {
       image: "/assets/sushi-dish-2.png",
     },
   ];
+
   return (
     <div className="splash">
       <div className="splash-left">
+        {" "}
         <span className="splash-left__main-text">
           Sushi Bliss, Every Roll a Flavorful
           <span className="green-text"> Kiss</span>
         </span>
-
         <span className="splash-left__small-text">
           Masters of Maki: Elevate Your Taste Buds with Our Sushi Creations,
           Where Tradition Meets Innovation!
         </span>
-
         <div className="button-container">
           <button className="splash-first__button">Order Now</button>
           <button className="splash-second__button">
@@ -49,9 +65,11 @@ const Splash = () => {
           className="best-sushi-text"
         />
         <div className="splash-right-bottom">
-          {props.map((prop, index) => {
-            return <Review {...prop} key={index} />;
-          })}
+          {screenWidth >= 790 ? (
+            props.map((prop, index) => <Review {...prop} key={index} />)
+          ) : (
+            <Review {...props[0]} key={0} />
+          )}
         </div>
       </div>
     </div>
