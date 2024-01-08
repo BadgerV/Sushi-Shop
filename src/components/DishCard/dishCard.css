@@ -7,7 +7,9 @@
   box-shadow: 2px 4px 30px 0px #0000001a;
   align-items: center;
   border-radius: 40px;
-  min-width: 1zrem;
+  min-width: 12rem;
+
+  cursor: pointer;
 }
 
 .dish-card__img-cont {
@@ -37,6 +39,114 @@
 
 .dish-card__sub-text {
   font-weight: 500;
-  color: #555555;
+  color: var(--nursery-color);
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 959px) {
+  .dish-card {
+    flex-grow: 0.7;
+  }
+}
+
+/* STYLING FOR EXPLICIT DISHCARD */
+
+.explicit-dishcard {
+  background-color: white;
+  position: relative;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 9px 42px 0px #0000001f;
+  padding: 2rem 1.5rem;
+  min-width: 18rem;
+
+  cursor: pointer;
+}
+
+.explicit-dishcard-heart__container {
+  background-color: var(--primary-color);
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+
+  border-top-right-radius: 32.5px;
+  border-bottom-left-radius: 32.5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.explicit-dishcard-heart__container img {
+  scale: 0.8;
+}
+
+.explicit-dish-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+  justify-content: start;
+}
+
+.explicit-dish-info-header {
+  transition: 0.2s all ease-in-out;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.explicit-dish-desc-header {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--nursery-color);
+}
+
+.explicit-dish-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.explicit-dish-bottom-left {
+  position: relative;
+}
+
+.explicit-dish-bottom-left img {
+  position: absolute;
+  scale: 0.9;
+  bottom: 0.2rem;
+}
+
+.explicit-dish-bottom-left span {
+  margin-left: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.explicit-dish-bottom-right {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+}
+.explicit-dish-bottom-right {
+  color: var(--nursery-color);
+}
+
+@media screen and (max-width: 655px) {
+  .explicit-dishcard {
+    flex-grow: 0.7;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .special-dishes-best-text {
+    font-size: 1.5rem;
+  }
 }

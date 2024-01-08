@@ -3,7 +3,7 @@
 }
 
 .customer-favorites__heading {
-  color: #f63b3b;
+  color: var(--accent-color);
   font-weight: 700;
   text-align: center;
   display: block;
