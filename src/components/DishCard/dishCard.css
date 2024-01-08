@@ -1,34 +1,42 @@
 .dish-card {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  padding: 1rem 4rem;
 
   box-shadow: 2px 4px 30px 0px #0000001a;
   align-items: center;
-  padding: 1rem 0;
   border-radius: 40px;
-  min-width: 15rem;
-  outline: 1px solid red;
+  min-width: 1zrem;
 }
 
-.dish-card__img {
-  /* border-radius: 50%;
+.dish-card__img-cont {
   height: 8rem;
   width: 8rem;
-  max-width: fit-content;
+  background-color: #c1f1c6;
 
   display: flex;
   align-items: center;
-  justify-content: center; */
-}
-
-.dish-card__img img {
-    scale: 0.8;
-  background-color: #c1f1c6;
-  padding: 2rem;
+  justify-content: center;
   border-radius: 50%;
 
+  margin-bottom: 1rem;
 }
 
-.dish-card > * {
+.dish-card__img-cont img {
+  max-height: 5rem;
+  max-width: 5rem;
+  scale: 1.1;
+}
+
+.dish-card__main-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1e1e1e;
+}
+
+.dish-card__sub-text {
+  font-weight: 500;
+  color: #555555;
+  font-size: 0.9rem;
 }

@@ -1,10 +1,28 @@
 .customer-favorites {
   padding: 3rem;
 }
+
+.customer-favorites__heading {
+  color: #f63b3b;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+
+  margin-bottom: 1rem;
+}
+
+.customer-favorites-sub__heading {
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+}
 .customer-favorites__dishes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 3rem;
+
 }

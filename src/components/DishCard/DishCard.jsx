@@ -1,13 +1,13 @@
 import "./dishCard.css";
 
-const DishCard = () => {
+const DishCard = ({ name, numberOfPieces, img }) => {
   return (
     <div className="dish-card">
-      <div className="dish-card__img">
-        <img src="/assets/big-dish-img-3.png" alt="" />
+      <div className="dish-card__img-cont">
+        <img src={`/assets/big-dish-image-${img}.png`} alt="Sushi Image" />
       </div>
-      <div className="dish-card__main-text">Main Dish</div>
-      <div className="dish-card__sub-text">(86 Dishes)</div>
+      <div className="dish-card__main-text">{name}</div>
+      <div className="dish-card__sub-text">{numberOfPieces}</div>
     </div>
   );
 };
