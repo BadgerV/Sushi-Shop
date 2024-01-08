@@ -1,3 +1,4 @@
+import CustomerFavorites from "../../components/CustomerFavorites/CustomerFavorites";
 import Navbar from "../../components/Navbar/Navbar";
 import Splash from "../../components/Splash/Splash";
 import "./home.css";
@@ -8,6 +9,7 @@ const Home = () => {
       <Navbar />
       <div className="home">
         <Splash />
+        <CustomerFavorites />
       </div>
     </>
   );
