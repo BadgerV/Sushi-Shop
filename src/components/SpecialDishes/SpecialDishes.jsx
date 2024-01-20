@@ -111,6 +111,8 @@ const SpecialDishes = () => {
     },
   ];
 
+  //just another comment
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
