@@ -123,6 +123,8 @@ const SpecialDishes = () => {
     currentPage * itemsPerPage
   );
 
+  //just another comment
+
   return (
     <div className="special-dishes">
       <div className="special-dishes-top">
