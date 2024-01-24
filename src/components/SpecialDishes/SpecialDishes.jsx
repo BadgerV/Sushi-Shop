@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useRef } from "react";
 import ExplicitDishCard from "../DishCard/ExplicitDishCard";
 import "./specialDishes.css";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const SpecialDishes = () => {
   const sushiMenu = [
@@ -113,17 +115,44 @@ const SpecialDishes = () => {
 
   //just another comment
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
+  const scrollRef = useRef(null);
+  const [dishRef, setDishRef] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const totalPages = Math.ceil(sushiMenu.length / itemsPerPage);
+  useEffect(() => {
+    dishRef && console.log(dishRef);
+  }, [dishRef]);
 
-  const visibleSushiMenu = sushiMenu.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
+  useEffect(() => {
+    scrollRef.current.scrollLeft = 50;
+  }, [scrollRef]);
 
-  //just another comment
+  useEffect(() => {
+    scrollRef.current.scrollLeft = scrollLeft;
+  }, [scrollLeft]);
+
+  const handleLeftClick = () => {
+    if (!dishRef.current) {
+      return;
+    }
+    if (scrollLeft <= 0) {
+      return;
+    } else {
+      setScrollLeft(scrollLeft - dishRef.current.offsetWidth);
+    }
+  };
+  const handleRightClick = () => {
+    if (!dishRef.current) {
+      return;
+    }
+
+    const newScrollLeft = Math.min(
+      scrollLeft + dishRef.current.offsetWidth,
+      scrollRef.current.scrollWidth - scrollRef.current.clientWidth
+    );
+
+    setScrollLeft(newScrollLeft);
+  };
 
   return (
     <div className="special-dishes">
@@ -137,33 +166,27 @@ const SpecialDishes = () => {
           </span>
         </div>
         <div className="special-dishes-middle__right">
-          {totalPages > 1 && (
-            <>
-              <button
-                onClick={() =>
-                  setCurrentPage((prevPage) =>
-                    prevPage > 1 ? prevPage - 1 : 1
-                  )
-                }
-              >
-                <img src="/assets/prev-button.png" alt="prev" />
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentPage((prevPage) =>
-                    prevPage < totalPages ? prevPage + 1 : totalPages
-                  )
-                }
-              >
-                <img src="/assets/next-button.png" alt="prev" />
-              </button>
-            </>
-          )}
+          <>
+            <button>
+              <img
+                src="/assets/prev-button.png"
+                alt="prev"
+                onClick={handleLeftClick}
+              />
+            </button>
+            <button>
+              <img
+                src="/assets/next-button.png"
+                alt="prev"
+                onClick={handleRightClick}
+              />
+            </button>
+          </>
         </div>
       </div>
-      <div className="special-dishes-bottom">
-        {visibleSushiMenu.map((dish, index) => (
-          <ExplicitDishCard key={index} {...dish} />
+      <div className="special-dishes-bottom" ref={scrollRef}>
+        {sushiMenu.map((dish, index) => (
+          <ExplicitDishCard key={index} {...dish} setDishRef={setDishRef} />
         ))}
         {sushiMenu.length === 0 && <p>No special dishes available</p>}
       </div>

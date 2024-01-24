@@ -38,11 +38,14 @@
 .special-dishes-bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+  /* justify-content: space-evenly; */
+  scroll-snap-type: x mandatory;
 
+  overflow: hidden;
+  gap: 1rem;
+
+  scroll-behavior: smooth;
+}
 
 @media screen and (max-width: 700px) {
   .special-dishes-best-text {

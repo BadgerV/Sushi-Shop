@@ -1,8 +1,22 @@
+import { useEffect, useRef } from "react";
 import "./dishcard.css";
 
-const ExplicitDishCard = ({ img, name, description, price, rating }) => {
+const ExplicitDishCard = ({
+  img,
+  name,
+  description,
+  price,
+  rating,
+  setDishRef,
+}) => {
+  const dishRef = useRef(null);
+
+  useEffect(() => {
+    dishRef && setDishRef(dishRef);
+  }, [dishRef]);
+
   return (
-    <div className="explicit-dishcard">
+    <div className="explicit-dishcard" ref={dishRef}>
       <div className="explicit-dishcard-heart__container">
         <img src="/assets/small-heart.png" alt="like" />
       </div>

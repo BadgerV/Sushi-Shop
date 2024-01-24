@@ -2,6 +2,7 @@ import CustomerFavorites from "../../components/CustomerFavorites/CustomerFavori
 import Navbar from "../../components/Navbar/Navbar";
 import SpecialDishes from "../../components/SpecialDishes/SpecialDishes";
 import Splash from "../../components/Splash/Splash";
+import Testimonials from "../../components/Testimonials/Testimonials";
 import "./home.css";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <Splash />
         <CustomerFavorites />
         <SpecialDishes />
+        <Testimonials />
       </div>
     </>
   );
