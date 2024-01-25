@@ -1,7 +1,6 @@
 .dish-card {
   display: flex;
   flex-direction: column;
-  /* flex-grow: 1; */
   padding: 1rem 4rem;
 
   box-shadow: 2px 4px 30px 0px #0000001a;
@@ -64,6 +63,7 @@
   min-width: 18rem;
 
   transition: 0.2s ease-in-out;
+  margin-bottom: 4rem;
 
   cursor: pointer;
 }

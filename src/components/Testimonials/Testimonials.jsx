@@ -10,9 +10,9 @@ const Testimonials = () => {
       <div className="testimonials__right">
         <span className="testimonial__heading">TESTIMONIALS</span>
 
-        <sapn className="testimonial__sub--heading">
+        <span className="testimonial__sub--heading">
           What Our Customers Say About Us
-        </sapn>
+        </span>
 
         <span className="testimonial__text">
           “I had the pleasure of dining at Foodi last night, and I'm still

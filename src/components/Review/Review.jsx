@@ -8,7 +8,7 @@ const Review = ({ name, rating, price, image }) => {
         <img src={image} alt="Dish" />
       </div>
       <div className="review-right">
-        <review className="dish-name">{name}</review>
+        <span className="dish-name">{name}</span>
         <div className="dish-rating">
           {Array.from({ length: +rating }).map((_, index) => (
             <img src="/assets/full-star-icon.png" alt="" key={index} />
