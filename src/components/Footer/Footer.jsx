@@ -1,4 +1,3 @@
-import FacebookIcon from "../CustomIcons/FacebookIcon";
 import "./footer.css";
 
 const Footer = () => {

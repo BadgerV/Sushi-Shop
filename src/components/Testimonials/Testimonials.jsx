@@ -15,7 +15,7 @@ const Testimonials = () => {
         </span>
 
         <span className="testimonial__text">
-          “I had the pleasure of dining at Foodi last night, and I'm still
+          “I had the pleasure of dining at Foodi last night, and I&rsquo;m still
           raving about the experience! The attention to detail in presentation
           and service was impeccable”
         </span>

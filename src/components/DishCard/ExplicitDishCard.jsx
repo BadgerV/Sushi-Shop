@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./dishcard.css";
+import "./dishCard.css";
 
 const ExplicitDishCard = ({
   img,
