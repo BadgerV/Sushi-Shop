@@ -43,7 +43,24 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer--bottom">
-        <FacebookIcon />
+        <div className="footer-bottom__left">
+          <div className="footer-icon">
+            <img src="/assets/facebook-icon.svg" alt="" />
+          </div>
+          <div className="footer-icon">
+            <img src="/assets/instagram-icon.svg" alt="" />
+          </div>
+          <div className="footer-icon">
+            <img src="/assets/twitter-icon.svg" alt="" />
+          </div>
+          <div className="footer-icon">
+            <img src="/assets/youtube-icon.svg" alt="" />
+          </div>
+        </div>
+
+        <span className="copyright-text">
+          Copyright 2023 Dscode | All rights reserved
+        </span>
       </div>
     </footer>
   );

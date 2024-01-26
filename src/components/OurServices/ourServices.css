@@ -61,8 +61,19 @@
     margin-bottom: 3rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .our--services {
+    padding: 1.5rem;
+  }
+}
 @media screen and (max-width: 530px) {
   .our--services__right {
     gap: 1.5rem;
   }
 }
+@media screen and (max-width: 400px) {
+  .our--services__right {
+    gap: 1rem;
+  }
+}
+
