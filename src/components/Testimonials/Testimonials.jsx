@@ -1,6 +1,8 @@
 import "./testimonials.css";
 
 const Testimonials = () => {
+
+  //just another comment
   return (
     <div className="testimonials">
       <div className="testimonials__left">
